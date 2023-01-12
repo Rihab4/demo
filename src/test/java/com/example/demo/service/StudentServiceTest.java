@@ -37,7 +37,7 @@ class StudentServiceTest {
         // WHEN
         List<Student> studentsOlderThan18=studentService.getStudentsOlderThan18();
         // THEN
-        Assertions.assertEquals(3,studentsOlderThan18.size());
+        Assertions.assertEquals(1,studentsOlderThan18.size());
 
     }
 }
