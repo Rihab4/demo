@@ -20,17 +20,21 @@ class StudentServiceTest {
     @Mock
     StudentRepository studentRepository;
     @InjectMocks
-    StudentService studentService;
+    StudentService studentService;//
 
     @Test
     void getStudentsOlderThan18() {
         // GIVEN
         List<Student> students = Arrays.asList(
                 Student.builder()
-                        .age(19)
+                        .name("joe")
+                        .email("joe@mail.com")
+                        .age(17)
                         .build(),
                 Student.builder()
-                        .age(17)
+                        .name("Rihab")
+                        .email("rihab.hassairi@supcom.com")
+                        .age(24)
                         .build()
         );
         Mockito.when(studentRepository.findAll()).thenReturn(students);
